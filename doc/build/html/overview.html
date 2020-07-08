@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>1. Overview &#8212; epage 1.0.0 documentation</title>
+    <title>overview &#8212; epage 1.0.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -14,8 +14,8 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. Installation" href="installation.html" />
-    <link rel="prev" title="Welcome to epage’s documentation!" href="index.html" />
+    <link rel="next" title="Prerequisites" href="installation.html" />
+    <link rel="prev" title="EPAGE" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -33,57 +33,33 @@
           <div class="body" role="main">
             
   <div class="section" id="overview">
-<h1>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="gcomposite-py">
-<h2>1.1. gComposite.py<a class="headerlink" href="#gcomposite-py" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>This program Calculates these Composite Expression Scores.</dt><dd><ul class="simple">
-<li><p>Gene Set Variation Analysis (GSVA). <a class="footnote-reference brackets" href="#id5" id="id1">1</a></p></li>
-<li><p>Single Sample GSEA (ssGSEA). <a class="footnote-reference brackets" href="#id6" id="id2">2</a></p></li>
-<li><p>zscore <a class="footnote-reference brackets" href="#id7" id="id3">3</a></p></li>
-<li><p>plage <a class="footnote-reference brackets" href="#id8" id="id4">4</a></p></li>
-</ul>
-</dd>
-</dl>
-</div>
-<div class="section" id="svm-performance-py">
-<h2>1.2. SVM_performance.py<a class="headerlink" href="#svm-performance-py" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>This program calculates these performance metrics of K-fold cross-validation.</dt><dd><ul class="simple">
-<li><p>F1_micro</p></li>
-<li><p>F1_macro</p></li>
-<li><p>Accuracy</p></li>
-<li><p>Precision</p></li>
-<li><p>Recall</p></li>
-</ul>
-</dd>
-</dl>
-</div>
-<div class="section" id="svm-predict-py">
-<h2>1.3. SVM_predict.py<a class="headerlink" href="#svm-predict-py" title="Permalink to this headline">¶</a></h2>
-<p>Build SVM model from “train_file” and then predict cases in “data_file”.</p>
-</div>
-<div class="section" id="svm-roc-py">
-<h2>1.4. SVM_ROC.py<a class="headerlink" href="#svm-roc-py" title="Permalink to this headline">¶</a></h2>
-<p>Plot <a class="reference external" href="https://en.wikipedia.org/wiki/Receiver_operating_characteristic">Receiver operating characteristic (ROC)</a> curves using K-fold cross-validation.</p>
-</div>
-<div class="section" id="references">
-<h2>1.5. References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<dl class="footnote brackets">
-<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Hänzelmann S, Castelo R, Guinney J. GSVA: gene set variation analysis for microarray and RNA-seq data. BMC Bioinformatics. 2013;14:7. Published 2013 Jan 16. doi:10.1186/1471-2105-14-7</p>
-</dd>
-<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Barbie DA, Tamayo P, Boehm JS, et al. Systematic RNA interference reveals that oncogenic KRAS-driven cancers require TBK1. Nature. 2009;462(7269):108-112. doi:10.1038/nature08460</p>
-</dd>
-<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>Lee E, Chuang HY, Kim JW, Ideker T, Lee D. Inferring pathway activity toward precise disease classification. PLoS Comput Biol. 2008;4(11):e1000217. doi:10.1371/journal.pcbi.1000217</p>
-</dd>
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><p>Tomfohr J, Lu J, Kepler TB. Pathway level analysis of gene expression using singular value decomposition. BMC Bioinformatics. 2005;6:225. Published 2005 Sep 12. doi:10.1186/1471-2105-6-225</p>
-</dd>
-</dl>
-</div>
+<h1>overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>The epage (Evaluate Protein Activity with Gene Expression) package contains several programs
+to calculate the <em>composite expression score</em>, build and evaluate SVM model, and use SVM model
+to predict new cases.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><p>gComposite.py</p></td>
+<td><p>Calculates these Composite Expression Scores</p></td>
+</tr>
+<tr class="row-odd"><td><p>SVM_performance.py</p></td>
+<td><p>Calculates these performance metrics of K-fold cross-validation</p></td>
+</tr>
+<tr class="row-even"><td><p>SVM_predict.py</p></td>
+<td><p>Build SVM model from “train_file” and then predict cases in “data_file”.</p></td>
+</tr>
+<tr class="row-odd"><td><p>SVM_ROC.py</p></td>
+<td><p>Plot Receiver operating characteristic (ROC) curves using K-fold cross-validation.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 
 
@@ -103,26 +79,33 @@
 
 
 <h3>Navigation</h3>
-<p class="caption"><span class="caption-text">CpGtools Documentation</span></p>
+<p class="caption"><span class="caption-text">Overview</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#gcomposite-py">1.1. gComposite.py</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#svm-performance-py">1.2. SVM_performance.py</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#svm-predict-py">1.3. SVM_predict.py</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#svm-roc-py">1.4. SVM_ROC.py</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#references">1.5. References</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">overview</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="change_log.html">3. CpGtools Release history</a></li>
+<p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#python-dependencies">Python dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#install">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#upgrade">Upgrade</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Usage Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo/SVM_performance.html">1. SVM_performance.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/gComposite.html">2. gComposite.py</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Release history</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="change_log.html">Version 1.0.0</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Welcome to epage’s documentation!</a></li>
-      <li>Next: <a href="installation.html" title="next chapter">2. Installation</a></li>
+      <li>Previous: <a href="index.html" title="previous chapter">EPAGE</a></li>
+      <li>Next: <a href="installation.html" title="next chapter">Prerequisites</a></li>
   </ul></li>
 </ul>
 </div>

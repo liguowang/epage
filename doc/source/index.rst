@@ -3,33 +3,22 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to epage's documentation!
-=================================
+EPAGE
+======================================================
 
 .. toctree::
-   :caption: CpGtools Documentation
-   :numbered:
+   :caption: Overview
    :maxdepth: 2
    
    overview
+
+.. toctree::
+   :caption: Installation
+   :maxdepth: 2
+   
    installation
-   change_log
-
-
-.. toctree::
-   :caption: Data Format
-   :numbered:
-   :maxdepth: 2
    
-   input_format
-
-.. toctree::
-   :caption: Test and Demo Datasets
-   :numbered:
-   :maxdepth: 2
-   
-   dataset
-   
+      
 .. toctree::
    :caption: Usage Information
    :numbered:
@@ -39,9 +28,8 @@ Welcome to epage's documentation!
    demo/*
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+   :caption: Release history
+   :maxdepth: 2
+   
+   change_log
