@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+PKG-INFO
+setup.py
+bin/gComposite.py
+bin/svm.py
+lib/gComposite.egg-info/PKG-INFO
+lib/gComposite.egg-info/SOURCES.txt
+lib/gComposite.egg-info/dependency_links.txt
+lib/gComposite.egg-info/not-zip-safe
+lib/gComposite.egg-info/requires.txt
+lib/gComposite.egg-info/top_level.txt
+lib/pacmodule/__init__.py
+lib/pacmodule/iList.py
+lib/pacmodule/iMatrix.py
+lib/pacmodule/iPas.py
+lib/pacmodule/iReader.py

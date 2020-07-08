@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+PKG-INFO
+setup.py
+bin/camp.py
+lib/Camp.egg-info/PKG-INFO
+lib/Camp.egg-info/SOURCES.txt
+lib/Camp.egg-info/dependency_links.txt
+lib/Camp.egg-info/not-zip-safe
+lib/Camp.egg-info/requires.txt
+lib/Camp.egg-info/top_level.txt
+lib/pacmodule/__init__.py
+lib/pacmodule/iList.py
+lib/pacmodule/iMatrix.py
+lib/pacmodule/iPas.py
+lib/pacmodule/iReader.py
+lib/pacmodule/ireader.py

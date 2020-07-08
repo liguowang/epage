@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>2. Installation &#8212; epage 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. CpGtools Release history" href="change_log.html" />
+    <link rel="prev" title="1. Overview" href="overview.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="installation">
+<h1>2. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>CpGtools are written in Python. Python3 (v3.5.x) is required to run all programs in
+CpGtools. Some programs also need R and R libraries to generate graphs and fit linear and
+beta-binomial models.</p>
+<div class="section" id="prerequisites">
+<h2>2.1. Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Note: You need to install these tools if they are not available from your computer.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.python.org/downloads/">Python 3</a></p></li>
+<li><p><a class="reference external" href="https://pip.pypa.io/en/stable/installing/">pip3</a></p></li>
+<li><p><a class="reference external" href="https://www.r-project.org/">R</a></p></li>
+<li><p>R library <a class="reference external" href="https://cran.r-project.org/package-aod">aod</a> (only required by <strong>dmc_bb.py</strong>)</p></li>
+<li><p>R library <a class="reference external" href="https://cran.r-project.org/web/packages/beanplot/index.html">beanplot</a>
+(only needed by <strong>beta_jitter_plot.py</strong>)</p></li>
+</ul>
+</div>
+<div class="section" id="python-dependencies">
+<h2>2.2. Python Dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>Note: You do NOT need to install these packages manually, as they will be automatically
+installed if you use <a class="reference external" href="https://pip.pypa.io/en/stable/installing/">pip3</a> to install CpGtools.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pandas.pydata.org/">pandas</a></p></li>
+<li><p><a class="reference external" href="http://www.numpy.org/">numpy</a></p></li>
+<li><p><a class="reference external" href="https://www.scipy.org/">scipy</a></p></li>
+<li><p><a class="reference external" href="https://www.scilearn.com/">sklearn</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/weblogo/">weblogo</a></p></li>
+<li><p><a class="reference external" href="https://github.com/bxlab/bx-python">bx-python</a></p></li>
+</ul>
+</div>
+<div class="section" id="install-cpgtools-using-pip3-from-pypi-or-github">
+<h2>2.3. Install CpGtools using pip3 from <a class="reference external" href="https://pypi.org/project/cpgtools/">PyPI</a> or <a class="reference external" href="https://github.com/liguowang/cpgtools">github</a><a class="headerlink" href="#install-cpgtools-using-pip3-from-pypi-or-github" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip3 install cpgtools
+or
+$ pip3 install git+https://github.com/liguowang/cpgtools.git
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-cpgtools-from-source-code">
+<h2>2.4. Install CpGtools from source code<a class="headerlink" href="#install-cpgtools-from-source-code" title="Permalink to this headline">¶</a></h2>
+<p>First, download the latest <a class="reference external" href="https://sourceforge.net/projects/cpgtools/files/">CpGtools</a>,
+and then execute the following commands</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tar zxf cpgtools-VERSION.tar.gz
+$ cd cpgtools-VERSION
+$ python3 setup.py install  #install CpGtools to the default location
+or
+$ python3 setup.py install --root-/home/my_pylib/  #install CpGtools to user specified location
+</pre></div>
+</div>
+<p>After the installation is completed, you probably need to setup up the environment variables
+(Below is only an example. Change according to your system configuration)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ export PYTHONPATH-/home/my_pylib/python3.7/site-packages:$PYTHONPATH
+</pre></div>
+</div>
+</div>
+<div class="section" id="upgrade-cpgtools">
+<h2>2.5. Upgrade CpGtools<a class="headerlink" href="#upgrade-cpgtools" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip3 install cpgtools --upgrade
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">epage</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">CpGtools Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">1. Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">2.1. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-dependencies">2.2. Python Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-cpgtools-using-pip3-from-pypi-or-github">2.3. Install CpGtools using pip3 from PyPI or github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-cpgtools-from-source-code">2.4. Install CpGtools from source code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upgrade-cpgtools">2.5. Upgrade CpGtools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="change_log.html">3. CpGtools Release history</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="overview.html" title="previous chapter">1. Overview</a></li>
+      <li>Next: <a href="change_log.html" title="next chapter">3. CpGtools Release history</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Liguo Wang, et al.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/installation.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

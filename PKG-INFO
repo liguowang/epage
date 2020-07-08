@@ -1,0 +1,19 @@
+Metadata-Version: 1.0
+Name: Camp
+Version: 0.1.0
+Summary:  Evaluate Protein Activity with Gene Expression.
+Home-page: https://camp.readthedocs.io/en/latest/index.html
+Author: Liguo Wang
+Author-email: wangliguo78@gmail.com
+License: MIT
+Description: This tool can be used to predict the functional consequences (gain- or loss-of-function) of somatic mutations according to increased or decreased protein activity. 
+Platform: Linux
+Platform: MacOS
+Classifier: Development Status :: 1 - production
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: MIT
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Requires: cython (>=0.17)
