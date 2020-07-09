@@ -118,10 +118,10 @@ def main():
 	df_pca = pd.read_csv(options.out_file + '_pca.csv',index_col = 0)
 	
 	data_frames = pd.concat([df_group, df_gsva, df_ssgsea,df_pca, df_zscore, df_plage],axis=1, join='inner')
-	data_frames.to_csv(options.out_file + '_combined.csv', index=True)
+	data_frames.to_csv(options.out_file + '_combined.tsv', index=True, sep="\t")
 	
-	data_frames = pd.concat([df_gsva, df_ssgsea,df_zscore, df_plage],axis=1, join='inner')
-	data_frames.to_csv(options.out_file + '_combined.tsv', index=True,sep="\t")
+	#data_frames = pd.concat([df_gsva, df_ssgsea,df_zscore, df_plage],axis=1, join='inner')
+	#data_frames.to_csv(options.out_file + '_combined.tsv', index=True,sep="\t")
 	
 if __name__=='__main__':
 	main()
