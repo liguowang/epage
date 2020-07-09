@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>2. gComposite.py &#8212; epage 1.0.0 documentation</title>
+    <title>4. gComposite.py &#8212; epage 1.0.0 documentation</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Version 1.0.0" href="../change_log.html" />
-    <link rel="prev" title="1. SVM_performance.py" href="SVM_performance.html" />
+    <link rel="prev" title="3. SVM_predict.py" href="SVM_predict.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -33,9 +33,9 @@
           <div class="body" role="main">
             
   <div class="section" id="gcomposite-py">
-<h1>2. gComposite.py<a class="headerlink" href="#gcomposite-py" title="Permalink to this headline">¶</a></h1>
+<h1>4. gComposite.py<a class="headerlink" href="#gcomposite-py" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="description">
-<h2>2.1. Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<h2>4.1. Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>This program Calculates these Composite Expression Scores. Compared to expression score of a single gene,
 <em>composite expression score</em> measure the overall activity of <strong>a set of genes</strong>. It is often used
 to measure the activity of a pathway or transcription factor.</p>
@@ -55,7 +55,7 @@ and used to calculate these scores.</p>
 </div>
 </div>
 <div class="section" id="options">
-<h2>2.2. Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<h2>4.2. Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><dl class="option-list">
 <dt><kbd><span class="option">--version</span></kbd></dt>
@@ -110,7 +110,7 @@ processors)</p>
 </div></blockquote>
 </div>
 <div class="section" id="input-files-examples">
-<h2>2.3. Input files (examples)<a class="headerlink" href="#input-files-examples" title="Permalink to this headline">¶</a></h2>
+<h2>4.3. Input files (examples)<a class="headerlink" href="#input-files-examples" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Gene expression table. Example: lung_expr.81genes.tsv</p></li>
 <li><p>Gene list in GMT format. Example: lung_p53_target.gmt</p></li>
@@ -118,19 +118,18 @@ processors)</p>
 </ul>
 </div>
 <div class="section" id="command">
-<h2>2.4. Command<a class="headerlink" href="#command" title="Permalink to this headline">¶</a></h2>
+<h2>4.4. Command<a class="headerlink" href="#command" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$  python3  gComposite.py  -e lung_expr.81genes.tsv -g  lung_p53_target.gmt  -k lung_group.csv -o lung
 </pre></div>
 </div>
 </div>
 <div class="section" id="output-files">
-<h2>2.5. Output files<a class="headerlink" href="#output-files" title="Permalink to this headline">¶</a></h2>
+<h2>4.5. Output files<a class="headerlink" href="#output-files" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p>output.R : R script to run GSVA package</p></li>
 <li><p>output.mat.tsv : Data that is actually used. Might be the same as the input “lung_expr.81genes.tsv”, or just a subset of “lung_expr.81genes.tsv”.</p></li>
-<li><p>output_combined.csv : comma-separated composite expression score (group IDs were included)</p></li>
-<li><p>output_combined.tsv : TAB-separated composite expression score (group IDs were NOT included)</p></li>
+<li><p>output_combined.tsv : comma-separated composite expression score (group IDs were also included)</p></li>
 <li><p>output_gsva.csv : GSVA scores</p></li>
 <li><p>output_pca.csv : First two principal components of PCA.</p></li>
 <li><p>output_plage.csv : PLAGE scores</p></li>
@@ -138,10 +137,13 @@ processors)</p>
 <li><p>output_zscore.csv : Z-scores</p></li>
 </ul>
 </div></blockquote>
-<p>The file “output_combined.csv” contains everything!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The file “output_combined.tsv” contains everything you need for SVM model building and testing.</p>
+</div>
 </div>
 <div class="section" id="references">
-<h2>2.6. References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>4.6. References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <dl class="footnote brackets">
 <dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Hänzelmann S, Castelo R, Guinney J. GSVA: gene set variation analysis for microarray and RNA-seq data. BMC Bioinformatics. 2013;14:7. Published 2013 Jan 16. doi:10.1186/1471-2105-14-7</p>
@@ -189,14 +191,16 @@ processors)</p>
 </ul>
 <p class="caption"><span class="caption-text">Usage Information</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="SVM_performance.html">1. SVM_performance.py</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. gComposite.py</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#description">2.1. Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#options">2.2. Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#input-files-examples">2.3. Input files (examples)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#command">2.4. Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#output-files">2.5. Output files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#references">2.6. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SVM_ROC.html">1. SVM_ROC.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SVM_performance.html">2. SVM_performance.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SVM_predict.html">3. SVM_predict.py</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. gComposite.py</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#description">4.1. Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">4.2. Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#input-files-examples">4.3. Input files (examples)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#command">4.4. Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#output-files">4.5. Output files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references">4.6. References</a></li>
 </ul>
 </li>
 </ul>
@@ -209,7 +213,7 @@ processors)</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="SVM_performance.html" title="previous chapter">1. SVM_performance.py</a></li>
+      <li>Previous: <a href="SVM_predict.html" title="previous chapter">3. SVM_predict.py</a></li>
       <li>Next: <a href="../change_log.html" title="next chapter">Version 1.0.0</a></li>
   </ul></li>
 </ul>

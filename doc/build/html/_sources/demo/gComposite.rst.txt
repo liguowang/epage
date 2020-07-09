@@ -79,15 +79,15 @@ Output files
 ------------
  * output.R : R script to run GSVA package
  * output.mat.tsv : Data that is actually used. Might be the same as the input "lung_expr.81genes.tsv", or just a subset of "lung_expr.81genes.tsv". 
- * output_combined.csv : comma-separated composite expression score (group IDs were included)
- * output_combined.tsv : TAB-separated composite expression score (group IDs were NOT included)
+ * output_combined.tsv : comma-separated composite expression score (group IDs were also included)
  * output_gsva.csv : GSVA scores
  * output_pca.csv : First two principal components of PCA. 
  * output_plage.csv : PLAGE scores
  * output_ssgsea.csv : ssGSEA scores
  * output_zscore.csv : Z-scores
 
-The file "output_combined.csv" contains everything!
+.. note::
+   The file "output_combined.tsv" contains everything you need for SVM model building and testing.
 
 References
 ----------
